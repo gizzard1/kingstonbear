@@ -1,0 +1,78 @@
+@media (max-width: 768px) {
+    /* Contenedor más estrecho en móvil */
+    .container { margin: 0 4vh; padding: 0 16px; }
+
+    /* Header: mostrar botón hamburguesa y ocultar navegación por defecto */
+    .site-header { padding: 12px 0; }
+    .mobile-toggle { display: inline-flex; background: transparent; border: none; color: var(--color-bg-light); font-size: 1.4rem; padding: 8px 10px; border-radius: 6px; align-items: center; justify-content: center; cursor: pointer; }
+    .main-nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--color-black); padding: 16px 20px; flex-direction: column; gap: 10px; z-index: 999; }
+    .main-nav.open { display: flex; }
+    .main-nav a { margin: 8px 0; font-size: 1.05rem; }
+
+    /* Hero: reducir tamaños y apilar contenidos */
+    .hero { min-height: 60vh; align-items: flex-start; padding-top: 40px; background-position: center top; }
+    .hero-content { flex-direction: column-reverse; gap: 18px; align-items: center; text-align: center; }
+    .hero-text { max-width: 100%; }
+    .hero-title { font-size: 2rem; }
+    .hero-subtitle { font-size: 1rem; margin-bottom: 18px; }
+    .hero-badge img { width: 140px; border-width: 8px; }
+
+    /* Servicios / Flota: una columna */
+    .services-grid, .fleet-grid, .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    /* Cómo funciona (steps) */
+    .steps-container { grid-template-columns: 1fr; grid-template-rows: auto; gap: 50px; padding: 20px 0; }
+    .step-1, .step-2, .step-3 { grid-column: 1; grid-row: auto; text-align: left; }
+
+    .step-1 .step-header,
+    .step-2 .step-header,
+    .step-3 .step-header { justify-content: flex-start; }
+
+    .step-1 p,
+    .step-2 p,
+    .step-3 p { margin-left: 0; margin-right: 0; }
+
+    /* Ocultar línea SVG/route-line en móvil y usar línea vertical simple */
+    .route-line { display: none; }
+    /* Ocultar los divs de ruta específicos usados en el HTML */
+    .steps-container .route.dashed-line.step-line,
+    .steps-container .route.dashed-line.rotate-180.step-line-2 {
+        display: none;
+    }
+
+    /* Ocultar divs vacíos que se usan como placeholders en el grid */
+    .steps-container > div:empty { display: none; }
+    /* Ajustes de animación en móvil */
+    .step { transform: translateY(50px) scale(0.95); }
+    .step.is-visible { transform: translateY(0) scale(1); }
+
+    /* VIP: apilar en móvil */
+    .vip-container { flex-direction: column; gap: 20px; }
+    .vip-form-wrapper { width: 100%; padding: 0; }
+    /* Expandir el formulario para ocupar todo el espacio disponible dentro del contenedor */
+    .vip-form {
+        max-width: none;
+        width: calc(100% + 32px);
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 20px;
+    }
+
+    /* Footer: columna única */
+    .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    /* Imágenes/Logos más pequeñas */
+    #emblem-logo { width: 32vh!important; border-width: 8px; }
+    #logo { width: 6vh; }
+
+    /* Botón flotante más pequeño */
+    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+
+    /* Formularios y botones */
+    .btn { font-size: 1rem; padding: 10px 18px; }
+    .btn-lg { padding: 12px 20px; }
+
+    /* Ajustes generales de tipografía para mejor lectura en pantallas pequeñas */
+    body { font-size: 15px; }
+    .hero-subtitle, .section-header p, .fleet-card p, .service-info p { font-size: 0.95rem; }
+}

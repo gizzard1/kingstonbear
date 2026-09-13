@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" href="public/styles/mobile-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -23,6 +24,7 @@
                     <small>PRIVATE TRANSPORTATION</small>
                 </div>
             </div>
+            <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false"><i class="fas fa-bars"></i></button>
             <nav class="main-nav">
                 <a onclick="scrollToSection('servicios',80)">Servicios</a>
                 <a onclick="scrollToSection('flota',100)">Flota</a>
@@ -30,26 +32,6 @@
                 <a onclick="scrollToSection('clientes',100)">Clientes</a>
                 <a onclick="scrollToSection('contacto',100)">Contacto</a>
             </nav>
-            <div class="header-actions">
-                <button class="lang-switch">
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="var(--color-gold)"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    >
-                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
-                    <path d="M3.6 9h16.8" />
-                    <path d="M3.6 15h16.8" />
-                    <path d="M11.5 3a17 17 0 0 0 0 18" />
-                    <path d="M12.5 3a17 17 0 0 1 0 18" />
-                    </svg>ES</button>
-            </div>
         </div>
     </header>
 
@@ -131,7 +113,7 @@
                 <div class="fleet-grid">
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Sedán">
+                            <img src="public/images/avanza.webp" alt="SUV">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -148,40 +130,15 @@
                                 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                                 <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                </svg>4
+                                </svg>6-7
                             </span>
                         </div>
-                        <h3>Sedán</h3>
-                        <p>Ideal para viajes ejecutivos y traslados al aeropuerto.</p>
-                    </article>
-                    <article class="fleet-card" data-reveal>
-                        <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="SUV">
-                            <span class="capacity-badge">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="var(--color-gold)"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                >
-                                <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                </svg>4
-                            </span>
-                        </div>
-                        <h3>SUV</h3>
+                        <h3>Toyota Avanza</h3>
                         <p>Espacio premium con máximo confort y presencia ejecutiva.</p>
                     </article>
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="MiniVan Compacta">
+                            <img src="public/images/xpander.webp" alt="xpander">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -198,15 +155,15 @@
                                 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                                 <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                                 <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                </svg>5-6
+                                </svg>7
                             </span>
                         </div>
-                        <h3>MiniVan Compacta</h3>
-                        <p>Perfecta para familias o grupos pequeños con equipaje.</p>
+                        <h3>Mitsubishi Xpander Cross</h3>
+                        <p>Transporte privado y familiar</p>
                     </article>
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="MiniVan">
+                            <img src="public/images/suburb.webp" alt="MiniVan Compacta">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -226,12 +183,37 @@
                                 </svg>7-8
                             </span>
                         </div>
-                        <h3>MiniVan</h3>
+                        <h3>Chevrolet Suburban</h3>
+                        <p>SUV de gran tamaño, muy usado para transporte ejecutivo o familiar de alto perfil</p>
+                    </article>
+                    <article class="fleet-card" data-reveal>
+                        <div class="fleet-image">
+                            <img src="public/images/urvan.webp" alt="MiniVan">
+                            <span class="capacity-badge">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="var(--color-gold)"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                >
+                                <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                </svg>10-15
+                            </span>
+                        </div>
+                        <h3>Nissan NV350 Urvan</h3>
                         <p>Amplio espacio para grupos medianos en total comodidad.</p>
                     </article>
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Toyota Hiace">
+                            <img src="public/images/hiance.webp" alt="Toyota HiAce">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -251,12 +233,37 @@
                                 </svg>14
                             </span>
                         </div>
-                        <h3>Toyota Hiace</h3>
+                        <h3>Toyota HiAce</h3>
                         <p>Capacidad amplia para equipos de trabajo o celebraciones.</p>
                     </article>
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Crafter">
+                            <img src="public/images/ford.jpeg" alt="Ford Transit">
+                            <span class="capacity-badge">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="20"
+                                height="20"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="var(--color-gold)"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                >
+                                <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
+                                </svg>18
+                            </span>
+                        </div>
+                        <h3>Ford Transit</h3>
+                        <p>Ideal para eventos corporativos y grupos grandes.</p>
+                    </article>
+                    <article class="fleet-card" data-reveal>
+                        <div class="fleet-image">
+                            <img src="public/images/crafter.webp" alt="Volkswagen Crafter">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -276,12 +283,12 @@
                                 </svg>19
                             </span>
                         </div>
-                        <h3>Crafter</h3>
-                        <p>Ideal para eventos corporativos y grupos grandes.</p>
+                        <h3>Volkswagen Crafter</h3>
+                        <p>Ideal para transporte de personal o turismo.</p>
                     </article>
                     <article class="fleet-card" data-reveal>
                         <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Sprinter">
+                            <img src="public/images/sprinter.webp" alt="Mercedes-Benz Sprinter">
                             <span class="capacity-badge">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -301,58 +308,8 @@
                                 </svg>20
                             </span>
                         </div>
-                        <h3>Sprinter</h3>
+                        <h3>Mercedes-Benz Sprinter</h3>
                         <p>Confort premium para grupos corporativos y convenciones.</p>
-                    </article>
-                    <article class="fleet-card" data-reveal>
-                        <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Autobús 35 PAX">
-                            <span class="capacity-badge">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="var(--color-gold)"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                >
-                                <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                </svg>35
-                            </span>
-                        </div>
-                        <h3>Autobús 35 PAX</h3>
-                        <p>Transporte ejecutivo para congresos y eventos de gran escala.</p>
-                    </article>
-                    <article class="fleet-card" data-reveal>
-                        <div class="fleet-image">
-                            <img src="public/images/sedan.avif" alt="Autobús 45 PAX">
-                            <span class="capacity-badge">
-                                <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="var(--color-gold)"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                >
-                                <path d="M9 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
-                                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                                <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
-                                </svg>45
-                            </span>
-                        </div>
-                        <h3>Autobús 45 PAX</h3>
-                        <p>Máxima capacidad para bodas, convenciones y traslados masivos.</p>
                     </article>
                 </div>
             </div>
@@ -559,6 +516,21 @@
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         >
+                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+                        <path d="M3 7l9 6l9 -6" />
+                        </svg>kingstonbearreservaciones@gmail.com</li>
+                    <li>
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--color-gold)"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        >
                         <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
                         <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
                         </svg>Guadalajara, Jalisco, México</li>
@@ -576,21 +548,6 @@
                         >
                         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
                         </svg>+52 33 1859 2151</li>
-                    <li>
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="28"
-                        height="28"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="var(--color-gold)"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        >
-                        <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-                        <path d="M3 7l9 6l9 -6" />
-                        </svg>kingstonbearreservaciones@gmail.com</li>
                 </ul>
             </div>
             <div class="footer-social">
@@ -640,7 +597,7 @@
                         >
                         <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
                         </svg></a>
-                    <a href="#" aria-label="LinkedIn">
+                    <a href="https://wa.me/+523318592151" target="_blank" rel="noopener" aria-label="WhatsApp">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="28"

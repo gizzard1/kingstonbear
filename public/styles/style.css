@@ -92,6 +92,9 @@ body {
     align-items: center;
 }
 
+/* Mostrar solo en móvil: botón hamburguesa */
+.mobile-toggle { display: none; }
+
 /* --- HERO SECTION --- */
 .hero {
     position: relative;
@@ -354,60 +357,7 @@ section { padding: 7vh 0; }
     display: block;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .steps-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        gap: 50px;
-        padding: 20px 0;
-    }
-    
-    /* En móvil, todos los pasos ocupan la única columna y se alinean a la izquierda */
-    .step-1, .step-2, .step-3 {
-        grid-column: 1;
-        grid-row: auto;
-        text-align: left;
-    }
-
-    .step-1 .step-header,
-    .step-2 .step-header,
-    .step-3 .step-header {
-        justify-content: flex-start;
-    }
-
-    .step-1 p,
-    .step-2 p,
-    .step-3 p {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* Ocultar la línea horizontal en móvil */
-    .route-line {
-        display: none;
-    }
-
-    /* Línea vertical para móvil */
-    .steps-container::before {
-        content: '';
-        position: absolute;
-        top: 40px;
-        bottom: 40px;
-        left: 20px;
-        width: 2px;
-        border-left: 2px dashed rgba(224, 225, 221, 0.3);
-        z-index: 0;
-    }
-    
-    /* Ajustar la animación en móvil */
-    .step {
-        transform: translateY(50px) scale(0.95);
-    }
-    .step.is-visible {
-        transform: translateY(0) scale(1);
-    }
-}
+/* Responsive styles moved to public/styles/mobile-style.css */
 /* --- TESTIMONIOS --- */
 .testimonials { background-color: var(--color-bg-light); }
 .testimonials-grid {
