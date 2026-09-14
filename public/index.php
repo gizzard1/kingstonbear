@@ -6,13 +6,6 @@ declare(strict_types=1);
  * Front controller - Punto de entrada único
  * Rutas:
  * - / → public/index.html (landing)
- * - /login → src/pages/login.php
- * - /register → src/pages/register.php
- * - /auth/login → src/auth/login.php (POST handler)
- * - /auth/register → src/auth/register.php (POST handler)
- * - /admin → src/pages/admin.php (admin only)
- * - /dashboard → src/pages/dashboard.php (protected)
- * - /logout → src/pages/logout.php
  */
 
 require_once __DIR__ . '/../config/bootstrap.php';
